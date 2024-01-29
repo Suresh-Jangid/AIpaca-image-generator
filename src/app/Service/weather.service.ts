@@ -8,7 +8,7 @@ import { TodaysHighlight } from '../Models/TodaysHighlight';
 import { Observable } from 'rxjs';
 import { EnvironmentalVariables } from '../Environment/EnvironmentVariable';
 import { WeekData } from '../Models/WeekData';
-
+import { NgxSpinnerService } from 'ngx-spinner';
 @Injectable({
   providedIn: 'root',
 })
@@ -40,9 +40,18 @@ export class WeatherService {
 // variables to control metric value
 celsius:boolean=true;
 fahrenheit:boolean=false;
-  constructor(private httpClient: HttpClient) {
-this.getData();
+  constructor(private spinner: NgxSpinnerService, private httpClient: HttpClient) {
+    this.openSpinner();
+    this.getData();
   }
+
+// spinner function for loading wait...
+openSpinner(){
+  this.spinner.show();
+  setTimeout(()=>{
+    this.spinner.hide();
+  },6500)
+}
 
 getSummaryImage(summary:string):string{
   // Base Folder Address containing the images
