@@ -1,0 +1,10 @@
+tools:		1. vs code
+		2. Node
+
+languages:	1.html
+		2.css
+		3.JavaScript
+		4.TypeScript
+		5.Angular17
+
+RapidApiKey : 518202e2bcmsh5b69037f4ed4666p1ae056jsnb51838dd7e20
