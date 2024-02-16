@@ -1,0 +1,18 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="timer"
+  [fullScreen]="true"
+  ><p style="color: white">Please wait...</p></ngx-spinner>
+<div class="app-container">
+  <div class="weather-container">
+    <div class="left-container">
+      <app-left-container></app-left-container>
+    </div>
+    <div class="right-container">
+      <app-right-container></app-right-container>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
